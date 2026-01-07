@@ -6,6 +6,7 @@ const app = express();
 const server = createServer(app);
 
 const io = new Server(server, {
+  path: "/ws/",       // changed: avoid default "/socket.io"
   cors: {
     origin: "*"
   }
