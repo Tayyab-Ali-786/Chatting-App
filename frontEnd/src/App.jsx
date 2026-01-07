@@ -5,7 +5,7 @@ import Chat from "./components/Chat";
 import { MessageSquare, User, Hash, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3002";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://parental-bass-tayyabalirashid-cc4644f1.koyeb.app/";
 const socket = io(BACKEND_URL, {
   path: "/ws/",
   transports: ["websocket"]
