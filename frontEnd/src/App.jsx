@@ -5,7 +5,11 @@ import Chat from "./components/Chat";
 import { MessageSquare, User, Hash, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const socket = io.connect("http://localhost:3002");
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3002";
+const socket = io(BACKEND_URL, {
+  path: "/ws/",
+  transports: ["websocket"]
+});
 
 function App() {
   const [username, setUsername] = useState("");
